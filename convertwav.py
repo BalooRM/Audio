@@ -34,6 +34,7 @@ dst = outfile
 print("Preparing to convert WAV file to MP3")
 input("Press Enter to continue...")
 #sys.exit("Goodbye")
+print("Converting from WAV to MP3...")
 
 # convert wav to mp3                                                            
 sound = AudioSegment.from_wav(src)
