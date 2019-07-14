@@ -1,0 +1,12 @@
+
+
+Installing FFmpeg in OS X
+Here are a couple of links to instructions:
+http://www.idiotinside.com/2016/05/01/ffmpeg-mac-os-x/
+http://macappstore.org/ffmpeg/
+
+Alternatively, Homebrew
+https://github.com/fluent-ffmpeg/node-fluent-ffmpeg/wiki/Installing-ffmpeg-on-Mac-OS-X
+
+Installing Python
+https://docs.python-guide.org/starting/install3/osx/
