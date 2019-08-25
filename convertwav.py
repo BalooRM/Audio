@@ -4,9 +4,10 @@ import sys
 import re
 
 appname = "convertwav.py"
+gaindB = 30
 
 usage = """  This script reads an input WAV file and converts it to
-  MP3 with a 20 dB gain.  
+  MP3 with a """ + str(gaindB) + """ dB gain.  
 
 Usage: 
  > python """ + appname + """ FILENAME.WAV
@@ -38,5 +39,5 @@ print("Converting from WAV to MP3...")
 
 # convert wav to mp3                                                            
 sound = AudioSegment.from_wav(src)
-sound = sound + 20
+sound = sound + gaindB
 sound.export(dst, format="mp3")
