@@ -52,7 +52,7 @@ print("Output =", outfile)
 # files                                                                         
 src = infile
 dst = outfile
-print("Preparing to convert WAV file to MP3")
+print("Preparing to convert WAV file to MP3 with a " + str(gaindB) + " dB gain.")
 print("A " + str(silencethold) + " dB silence threshhold will be applied to the start.")
 print("Conversion will begin up to " + str(leadingtime) + " milliseconds before silence threshhold detection.")
 input("Press Enter to continue...")
