@@ -79,7 +79,18 @@ sound = sound[trim_start:duration-trim_end]
 print(str(trim_start/1000.0) + " seconds trimmed from start.")
 print(str(trim_end/1000.0) + " seconds trimmed from end.")
 # apply gain factor
+chan = sound.split_to_mono()     # split multiple channels into mono
 sound = sound + gaindB
 sound.export(dst, format="mp3")
+
+for i in range(0, sound.channels):
+    print("Channel " + str(i))
+    if (trim_start > 0):
+        print("Average background level = ", str(chan[i][0:trim_start].dBFS))
+    dst = infile.split('.')[0] + "_chan" + str(i) + ".mp3"
+    print("Writing channel output to " + dst)
+    chan[i] = chan[i] + gaindB
+    chan[i].export(dst, format="mp3")
+
 print("Conversion complete.")
 input("Press Enter to continue...")
