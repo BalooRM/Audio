@@ -1,3 +1,2 @@
 # Audio
-Audio conversion script uses pydub and ffmpeg and accepts a WAV filename as input and outputs an MP3 file. 
-The conversion also includes +20dB increase to account for the low recording level in the WAV file. 
+Audio conversion script uses pydub and ffmpeg and accepts a WAV filename as input and outputs MP3 files for the combined (stereo) channels and all channels individually. The conversion includes +30dB increase to account for the low recording level in the WAV file. Silence is detected at the beginning. Conversion begins 1 second before the onset of sound above a threshhold (or at track start). 
